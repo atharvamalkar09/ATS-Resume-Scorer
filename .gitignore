@@ -1,0 +1,26 @@
+.env
+
+# Virtual environment
+aiml/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model files
+*.bin
+*.pt
+*.pth
+*.safetensors
+
+# Uploaded files
+uploads/
+generated_reports/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# IDE
+.vscode/

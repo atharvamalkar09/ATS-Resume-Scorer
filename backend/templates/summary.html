@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATS Resume Score Report</title>
+    <style>
+        /* ── Page & Typography ── */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #1e293b;
+            margin: 0;
+            padding: 40px 50px;
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        /* ── Page Header ── */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid #1e293b;
+            padding-bottom: 14px;
+            margin-bottom: 32px;
+        }
+        .page-header .report-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #64748b;
+        }
+        .page-header .date {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* ── Report Title ── */
+        .report-title {
+            font-size: 30px;
+            font-weight: 900;
+            color: #0f172a;
+            margin: 0 0 30px 0;
+            letter-spacing: -0.5px;
+        }
+
+        /* ── Overall Score Box ── */
+        .score-section {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .score-label {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #475569;
+            margin-bottom: 8px;
+        }
+        .score-number {
+            font-size: 80px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -3px;
+        }
+        .score-denom {
+            font-size: 36px;
+            font-weight: 400;
+            color: #94a3b8;
+            letter-spacing: -1px;
+        }
+        .score-interpretation {
+            font-size: 15px;
+            color: #475569;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* ── Section Headings ── */
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #334155;
+            margin: 32px 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        /* ── Score Breakdown Table with Progress Bars ── */
+        .breakdown-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+            gap: 14px;
+        }
+        .breakdown-label {
+            width: 160px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+            flex-shrink: 0;
+        }
+        .breakdown-bar-wrap {
+            flex: 1;
+            background: #f1f5f9;
+            border-radius: 4px;
+            height: 10px;
+            overflow: hidden;
+        }
+        .breakdown-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+        .bar-green  { background: #16a34a; }
+        .bar-amber  { background: #d97706; }
+        .bar-red    { background: #dc2626; }
+        .breakdown-score {
+            width: 60px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: right;
+            flex-shrink: 0;
+            color: #1e293b;
+        }
+        .breakdown-sublabel {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 400;
+            display: block;
+        }
+
+        /* ── Strengths ── */
+        .strength-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 10px 14px;
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            border-radius: 0 6px 6px 0;
+            font-size: 13px;
+            color: #14532d;
+        }
+        .strength-item::before { 
+            content: "✓"; 
+            font-weight: 700; 
+            flex-shrink: 0; 
+        }
+
+        /* ── Critical Issues ── */
+        .issue-card {
+            border-left: 4px solid #dc2626;
+            background: #fef2f2;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .issue-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #991b1b;
+            margin: 0 0 6px 0;
+        }
+        .issue-meta {
+            font-size: 12px;
+            color: #7f1d1d;
+            margin: 0 0 8px 0;
+        }
+        .issue-fix {
+            font-size: 12px;
+            color: #047857;
+            background: #ecfdf5;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        .empty-state {
+            color: #64748b;
+            font-size: 13px;
+            background: #f0fdf4;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            margin-top: 48px;
+            padding-top: 16px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 11px;
+            color: #94a3b8;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Page Header ── -->
+    <div class="page-header">
+        <div>
+            <div class="report-label">ATS Resume Score Report</div>
+        </div>
+        <div class="date" id="report-date"></div>
+    </div>
+
+    <h1 class="report-title">ATS Resume Score Report</h1>
+
+    <!-- ── Overall Score ── -->
+    <div class="score-section">
+        <div class="score-label">Overall ATS Score</div>
+        <div>
+            <span class="score-number" id="score-number" style="color: #16a34a;">85</span>
+            <span class="score-denom">/100</span>
+        </div>
+        <div class="score-interpretation" id="score-interpretation"></div>
+    </div>
+
+    <!-- ── Score Breakdown ── -->
+    <h2>Score Breakdown</h2>
+    <div id="breakdown-container"></div>
+
+    <!-- ── Strengths ── -->
+    <h2>Strengths</h2>
+    <div id="strengths-container"></div>
+
+    <!-- ── Critical Issues ── -->
+    <h2>Critical Issues</h2>
+    <div id="issues-container"></div>
+
+    <!-- ── Footer ── -->
+    <div class="footer">
+        <span>Generated by ATS Resume Scorer</span>
+        <span>Report 1 of 4 — Score Summary</span>
+    </div>
+
+    <script>
+        // ── Sample Report Data ──
+        const reportData = {
+            timestamp: new Date().toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            }),
+            overallScore: 85,
+            componentScores: {
+                formatting: 18,
+                keywords: 22,
+                content: 20,
+                skillValidation: 13,
+                atsCompatibility: 14
+            },
+            componentMaxScores: {
+                formatting: 20,
+                keywords: 25,
+                content: 25,
+                skillValidation: 15,
+                atsCompatibility: 15
+            },
+            componentLabels: {
+                formatting: 'Formatting',
+                keywords: 'Keywords & Skills',
+                content: 'Content Quality',
+                skillValidation: 'Skill Validation',
+                atsCompatibility: 'ATS Compatibility'
+            },
+            componentSublabels: {
+                formatting: 'Structure, section headers, bullet points',
+                keywords: 'Keyword density and relevance',
+                content: 'Action verbs, metrics, achievements',
+                skillValidation: 'Skills backed by project evidence',
+                atsCompatibility: 'Clean formatting, no parsing blockers'
+            },
+            strengths: [
+                'Well-structured sections with clear headers and bullet points',
+                'Good keyword density aligned with industry standards',
+                'Strong action verbs used throughout experience bullets',
+                'Quantifiable metrics and achievements demonstrated'
+            ],
+            criticalIssues: [
+                {
+                    title: 'Missing Contact Information',
+                    explanation: 'Your resume does not include a clear phone number or professional email.',
+                    fix: 'Add a "Contact" section at the top with your name, email, phone, and LinkedIn URL.'
+                },
+                {
+                    title: 'Weak Professional Summary',
+                    explanation: 'The summary lacks keywords and doesn\'t clearly state your value proposition.',
+                    fix: 'Rewrite your summary in 2–3 sentences, emphasizing key skills and relevant achievements.'
+                },
+                {
+                    title: 'ATS Parsing Issues Detected',
+                    explanation: 'The resume contains special characters that may confuse ATS systems.',
+                    fix: 'Remove decorative symbols, icons, and non-standard formatting. Use simple text only.'
+                }
+            ]
+        };
+
+        // ── Helper: Get Score Color ──
+        function getScoreColor(percentage) {
+            if (percentage >= 75) return '#16a34a';
+            if (percentage >= 50) return '#d97706';
+            return '#dc2626';
+        }
+
+        // ── Helper: Get Bar Class ──
+        function getBarClass(percentage) {
+            if (percentage >= 75) return 'bar-green';
+            if (percentage >= 50) return 'bar-amber';
+            return 'bar-red';
+        }
+
+        // ── Helper: Get Interpretation ──
+        function getInterpretation(score) {
+            if (score >= 80) return 'Great! Your resume should perform well with most ATS systems.';
+            if (score >= 60) return 'Good start. A few improvements will significantly boost your score.';
+            return 'Your resume needs work before applying. Follow the recommendations.';
+        }
+
+        // ── Render Overall Score ──
+        function renderOverallScore() {
+            const date = document.getElementById('report-date');
+            const scoreNumber = document.getElementById('score-number');
+            const scoreInterpretation = document.getElementById('score-interpretation');
+
+            date.textContent = reportData.timestamp;
+            scoreNumber.textContent = Math.round(reportData.overallScore);
+            scoreNumber.style.color = getScoreColor(reportData.overallScore);
+            scoreInterpretation.textContent = getInterpretation(reportData.overallScore);
+        }
+
+        // ── Render Score Breakdown ──
+        function renderBreakdown() {
+            const container = document.getElementById('breakdown-container');
+            const components = ['formatting', 'keywords', 'content', 'skillValidation', 'atsCompatibility'];
+
+            let html = '';
+            components.forEach(component => {
+                const score = reportData.componentScores[component];
+                const maxScore = reportData.componentMaxScores[component];
+                const pct = (score / maxScore) * 100;
+                const label = reportData.componentLabels[component];
+                const sublabel = reportData.componentSublabels[component];
+                const barClass = getBarClass(pct);
+
+                html += `
+                    <div class="breakdown-row">
+                        <div class="breakdown-label">
+                            ${label}
+                            <span class="breakdown-sublabel">${sublabel}</span>
+                        </div>
+                        <div class="breakdown-bar-wrap">
+                            <div class="breakdown-bar-fill ${barClass}" style="width: ${pct}%;"></div>
+                        </div>
+                        <div class="breakdown-score">${Math.round(score)}/${maxScore}</div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        // ── Render Strengths ──
+        function renderStrengths() {
+            const container = document.getElementById('strengths-container');
+
+            if (reportData.strengths && reportData.strengths.length > 0) {
+                let html = '';
+                reportData.strengths.forEach(strength => {
+                    html += `<div class="strength-item">${strength}</div>`;
+                });
+                container.innerHTML = html;
+            } else {
+                container.innerHTML = '<p class="empty-state">No major strengths detected. Work through the recommendations to build them.</p>';
+            }
+        }
+
+        // ── Render Critical Issues ──
+        function renderIssues() {
+            const container = document.getElementById('issues-container');
+
+            if (reportData.criticalIssues && reportData.criticalIssues.length > 0) {
+                let html = '';
+                reportData.criticalIssues.forEach(issue => {
+                    html += `
+                        <div class="issue-card">
+                            <div class="issue-title">${issue.title}</div>
+                            <div class="issue-meta">${issue.explanation}</div>
+                            <div class="issue-fix"><strong>Fix:</strong> ${issue.fix}</div>
+                        </div>
+                    `;
+                });
+                container.innerHTML = html;
+            } else {
+                container.innerHTML = '<p class="empty-state">No critical issues found. Review medium-priority items in the recommendations report.</p>';
+            }
+        }
+
+        // ── Initialize Report ──
+        function initializeReport() {
+            renderOverallScore();
+            renderBreakdown();
+            renderStrengths();
+            renderIssues();
+        }
+
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', initializeReport);
+    </script>
+
+</body>
+</html>

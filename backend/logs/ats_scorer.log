@@ -1,0 +1,115 @@
+2026-07-30 23:46:40,637 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:46:40,638 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:46:44,163 - INFO - Loaded en_core_web_md
+2026-07-30 23:46:44,163 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:46:54,669 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:46:54,679 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:46:56,239 - INFO - shutting down the api!!
+2026-07-30 23:47:08,049 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:47:08,049 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:47:11,163 - INFO - Loaded en_core_web_md
+2026-07-30 23:47:11,163 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:47:21,499 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:47:21,499 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:47:44,643 - ERROR - Neither SUPABASE_URL (for JWKS) nor SUPABASE_JWT_SECRET configured — cannot verify tokens
+2026-07-30 23:49:58,098 - INFO - shutting down the api!!
+2026-07-30 23:49:59,880 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:49:59,880 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:50:03,486 - INFO - Loaded en_core_web_md
+2026-07-30 23:50:03,489 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:50:14,900 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:50:14,900 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:50:27,173 - INFO - shutting down the api!!
+2026-07-30 23:50:29,023 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:50:29,023 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:50:32,480 - INFO - Loaded en_core_web_md
+2026-07-30 23:50:32,480 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:50:43,449 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:50:43,449 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:50:43,557 - INFO - shutting down the api!!
+2026-07-30 23:50:45,183 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:50:45,183 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:50:48,349 - INFO - Loaded en_core_web_md
+2026-07-30 23:50:48,349 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:51:00,888 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:51:00,888 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:51:00,996 - INFO - shutting down the api!!
+2026-07-30 23:51:03,100 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:51:03,100 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:51:07,402 - INFO - Loaded en_core_web_md
+2026-07-30 23:51:07,402 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:51:20,297 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:51:20,297 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:53:06,668 - INFO - shutting down the api!!
+2026-07-30 23:53:10,649 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:53:10,649 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:53:13,785 - INFO - Loaded en_core_web_md
+2026-07-30 23:53:13,785 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:53:24,138 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:53:24,139 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:53:52,489 - ERROR - Neither SUPABASE_URL (for JWKS) nor SUPABASE_JWT_SECRET configured — cannot verify tokens
+2026-07-30 23:57:16,996 - INFO - shutting down the api!!
+2026-07-30 23:57:18,849 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:57:18,849 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:57:22,071 - INFO - Loaded en_core_web_md
+2026-07-30 23:57:22,071 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:57:32,905 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:57:32,905 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:57:33,010 - INFO - shutting down the api!!
+2026-07-30 23:57:36,875 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:57:36,875 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:57:39,960 - INFO - Loaded en_core_web_md
+2026-07-30 23:57:39,960 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-30 23:57:50,422 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-30 23:57:50,422 - INFO - All models loaded. API is ready to serve requests.
+2026-07-30 23:58:14,726 - ERROR - File parsing failed: failed to find libmagic.  Check your installation
+2026-07-30 23:59:06,366 - INFO - shutting down the api!!
+2026-07-30 23:59:47,043 - INFO - Starting ATS Resume Analyzer API...
+2026-07-30 23:59:47,043 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-30 23:59:50,216 - INFO - Loaded en_core_web_md
+2026-07-30 23:59:50,216 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-31 00:00:03,340 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-31 00:00:03,340 - INFO - All models loaded. API is ready to serve requests.
+2026-07-31 00:02:59,220 - INFO - parse_Resume_file: parsing file :atharva_malkar.pdf
+2026-07-31 00:02:59,221 - WARNING - parse_resume_file: valiudation failed for file atharva_malkar.pdf
+2026-07-31 00:02:59,221 - ERROR - File parsing failed: error deteminin the file type : module 'magic' has no attribute 'from_buffer'
+2026-07-31 00:03:44,431 - INFO - shutting down the api!!
+2026-07-31 00:09:34,932 - INFO - Starting ATS Resume Analyzer API...
+2026-07-31 00:09:34,932 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-31 00:09:38,750 - INFO - Loaded en_core_web_md
+2026-07-31 00:09:38,750 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-31 00:11:21,915 - INFO - Starting ATS Resume Analyzer API...
+2026-07-31 00:11:21,915 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-31 00:11:25,145 - INFO - Loaded en_core_web_md
+2026-07-31 00:11:25,145 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-31 00:18:13,071 - INFO - Starting ATS Resume Analyzer API...
+2026-07-31 00:18:13,072 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-07-31 00:18:22,742 - INFO - Loaded en_core_web_md
+2026-07-31 00:18:22,742 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-07-31 00:19:13,817 - INFO - Loaded all-MiniLM-L6-v2
+2026-07-31 00:19:13,817 - INFO - All models loaded. API is ready to serve requests.
+2026-07-31 00:22:04,274 - INFO - parse_Resume_file: parsing file :atharva_malkar.pdf
+2026-07-31 00:22:04,417 - INFO - parse_resume_file: Extracted 3090 chars from atharva_malkar.pdf
+2026-07-31 00:22:04,417 - INFO - Parsed 'atharva_malkar.pdf': 3090 chars extracted
+2026-07-31 00:22:07,090 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-07-31 00:22:08,838 - INFO - Groq parsed summary: 'Full-stack ML enthusiast working on systems that integrate training, deployment, and monitoring. Han'
+2026-07-31 00:22:08,838 - INFO - Groq parsed skills count: 23
+2026-07-31 00:22:08,838 - INFO - Groq parsed experience count: 1
+2026-07-31 00:22:13,837 - INFO - Saved analysis for user de99c0a4-a448-48be-9385-5675f56836d0: 1
+2026-07-31 00:29:16,072 - INFO - parse_Resume_file: parsing file :Samarth_Resume_V_F.pdf
+2026-07-31 00:29:16,210 - INFO - parse_resume_file: Extracted 2384 chars from Samarth_Resume_V_F.pdf
+2026-07-31 00:29:16,210 - INFO - Parsed 'Samarth_Resume_V_F.pdf': 2384 chars extracted
+2026-07-31 00:29:17,984 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-07-31 00:29:19,765 - INFO - Groq parsed summary: ''
+2026-07-31 00:29:19,765 - INFO - Groq parsed skills count: 41
+2026-07-31 00:29:19,765 - INFO - Groq parsed experience count: 0
+2026-07-31 00:29:24,605 - INFO - Saved analysis for user de99c0a4-a448-48be-9385-5675f56836d0: 2
+2026-07-31 00:30:23,161 - INFO - parse_Resume_file: parsing file :atharva_malkar.pdf
+2026-07-31 00:30:23,303 - INFO - parse_resume_file: Extracted 3090 chars from atharva_malkar.pdf
+2026-07-31 00:30:23,303 - INFO - Parsed 'atharva_malkar.pdf': 3090 chars extracted
+2026-07-31 00:30:25,130 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-07-31 00:30:26,786 - INFO - Groq parsed summary: 'Full-stack ML enthusiast working on systems that integrate training, deployment, and monitoring. Han'
+2026-07-31 00:30:26,786 - INFO - Groq parsed skills count: 23
+2026-07-31 00:30:26,787 - INFO - Groq parsed experience count: 1
+2026-07-31 00:30:30,441 - INFO - Saved analysis for user de99c0a4-a448-48be-9385-5675f56836d0: 3
+2026-07-31 00:47:11,775 - INFO - shutting down the api!!
