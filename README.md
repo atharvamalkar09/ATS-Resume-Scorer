@@ -1,32 +1,10 @@
 # ATS-Resume-Scorer
 
-ATS Resume Scorer is a full-stack Python application for analyzing and scoring resumes against job descriptions. It leverages NLP and AI to simulate modern Applicant Tracking Systems (ATS). Because ATS are ubiquitous – used by 98% of Fortune 500 companies and ~75% of organizations overall – optimizing resumes for these systems is crucial. This project provides features like keyword and skill matching, formatting checks, and score explanations, plus PDF reports with improvement suggestions. It uses a FastAPI backend (for API endpoints and scoring logic) and a Streamlit frontend (for a user-friendly UI), with Supabase handling authentication and data storage. The ATS scoring pipeline extracts text from resumes, identifies relevant keywords/skills (using spaCy), computes semantic similarity (via SentenceTransformers), checks formatting, and combines these into a custom score. The report also uses a Groq LLM to generate targeted resume improvement tips, with careful prompt design and moderation. This README covers the project’s value proposition, features, architecture, installation, usage, API, scoring logic, testing, deployment, and contributor guidelines in detail.
+ATS Resume Scorer is a full-stack Python application for analyzing and scoring resumes against job descriptions. It leverages NLP and AI to simulate modern Applicant Tracking Systems (ATS). Because ATS are ubiquitous – used by 98% of Fortune 500 companies and ~75% of organizations overall – optimizing resumes for these systems is crucial. This project provides features like keyword and skill matching, formatting checks, and score explanations, plus PDF reports with improvement suggestions. 
 
+It uses a FastAPI backend (for API endpoints and scoring logic) and a Streamlit frontend (for a user-friendly UI), with Supabase handling authentication and data storage. The ATS scoring pipeline extracts text from resumes, identifies relevant keywords/skills (using spaCy), computes semantic similarity (via SentenceTransformers), checks formatting, and combines these into a custom score. The report also uses a Groq LLM to generate targeted resume improvement tips, with careful prompt design and moderation.
 
-Table of Contents
-Project Overview
-Demo
-Features
-Architecture & Components
-Technology Stack
-Installation
-Configuration (Environment Variables)
-Running the Application
-API Reference
-ATS Scoring Pipeline
-LLM Suggestions & Prompting
-PDF Report Generation
-Database & Migrations
-Testing & CI/CD
-Deployment
-Performance, Security, & Privacy
-Contribution Guide
-Code of Conduct
-License
-Changelog
-Roadmap
-Acknowledgements
-Contact
+This README covers the project’s value proposition, features, architecture, installation, usage, API, scoring logic, testing, deployment, and contributor guidelines in detail.
 
 
 Project Overview
