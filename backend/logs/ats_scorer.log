@@ -113,3 +113,41 @@
 2026-07-31 00:30:26,787 - INFO - Groq parsed experience count: 1
 2026-07-31 00:30:30,441 - INFO - Saved analysis for user de99c0a4-a448-48be-9385-5675f56836d0: 3
 2026-07-31 00:47:11,775 - INFO - shutting down the api!!
+2026-08-05 12:08:24,346 - INFO - Starting ATS Resume Analyzer API...
+2026-08-05 12:08:24,346 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-08-05 12:08:40,198 - INFO - Loaded en_core_web_md
+2026-08-05 12:08:40,198 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-08-05 12:10:38,255 - INFO - Loaded all-MiniLM-L6-v2
+2026-08-05 12:10:38,255 - INFO - All models loaded. API is ready to serve requests.
+2026-08-05 12:12:05,688 - INFO - parse_Resume_file: parsing file :atharvamalkar_resume.pdf
+2026-08-05 12:12:06,262 - INFO - parse_resume_file: Extracted 3707 chars from atharvamalkar_resume.pdf
+2026-08-05 12:12:06,263 - INFO - Parsed 'atharvamalkar_resume.pdf': 3707 chars extracted
+2026-08-05 12:12:11,038 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-08-05 12:12:13,226 - INFO - Groq parsed summary: 'Computer Science graduate experienced in full-stack development, REST APIs, unit testing, debugging,'
+2026-08-05 12:12:13,227 - INFO - Groq parsed skills count: 33
+2026-08-05 12:12:13,227 - INFO - Groq parsed experience count: 1
+2026-08-05 12:12:22,222 - INFO - Saved analysis for user de99c0a4-a448-48be-9385-5675f56836d0: 4
+2026-08-05 12:13:07,073 - INFO - parse_Resume_file: parsing file :atharvamalkar_resume.pdf
+2026-08-05 12:13:07,558 - INFO - parse_resume_file: Extracted 3707 chars from atharvamalkar_resume.pdf
+2026-08-05 12:13:07,558 - INFO - Parsed 'atharvamalkar_resume.pdf': 3707 chars extracted
+2026-08-05 12:13:09,729 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-08-05 12:13:17,012 - INFO - Groq parsed summary: 'Computer Science graduate experienced in full-stack development, REST APIs, unit testing, debugging,'
+2026-08-05 12:13:17,013 - INFO - Groq parsed skills count: 33
+2026-08-05 12:13:17,013 - INFO - Groq parsed experience count: 1
+2026-08-05 12:13:32,465 - INFO - Saved analysis for user de99c0a4-a448-48be-9385-5675f56836d0: 5
+2026-08-05 12:13:58,284 - INFO - parse_Resume_file: parsing file :atharva_malkar_resume.pdf
+2026-08-05 12:13:58,779 - INFO - parse_resume_file: Extracted 4056 chars from atharva_malkar_resume.pdf
+2026-08-05 12:13:58,780 - INFO - Parsed 'atharva_malkar_resume.pdf': 4056 chars extracted
+2026-08-05 12:14:00,830 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-08-05 12:14:02,644 - INFO - Groq parsed summary: 'Computer Science graduate with hands-on experience in data analysis, exploratory data analysis, and '
+2026-08-05 12:14:02,645 - INFO - Groq parsed skills count: 30
+2026-08-05 12:14:02,645 - INFO - Groq parsed experience count: 1
+2026-08-05 12:14:13,726 - INFO - Saved analysis for user de99c0a4-a448-48be-9385-5675f56836d0: 6
+2026-08-05 12:19:53,456 - INFO - parse_Resume_file: parsing file :atharvamalkar_resume.pdf
+2026-08-05 12:19:53,961 - INFO - parse_resume_file: Extracted 3707 chars from atharvamalkar_resume.pdf
+2026-08-05 12:19:53,962 - INFO - Parsed 'atharvamalkar_resume.pdf': 3707 chars extracted
+2026-08-05 12:19:56,342 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-08-05 12:19:58,493 - INFO - Groq parsed summary: 'Computer Science graduate experienced in full-stack development, REST APIs, unit testing, debugging,'
+2026-08-05 12:19:58,494 - INFO - Groq parsed skills count: 33
+2026-08-05 12:19:58,494 - INFO - Groq parsed experience count: 1
+2026-08-05 12:20:13,341 - INFO - Saved analysis for user de99c0a4-a448-48be-9385-5675f56836d0: 7
